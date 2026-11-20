@@ -1,0 +1,224 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --fondo-pagina: #fdf7f9;
+    --fondo-hoja: #ffffff;
+    --rosa-principal: #cf5c7c;
+    --rosa-oscuro: #9e3855;
+    --rosa-suave: #fcebf0;
+    --borde-suave: #f2d5de;
+    --texto-principal: #2a2124;
+    --texto-secundario: #68575c;
+}
+
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--fondo-pagina);
+    color: var(--texto-principal);
+    line-height: 1.65;
+    padding: 2.5rem 1rem;
+}
+
+.encabezado,
+.contenido,
+.pie {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--fondo-hoja);
+    border-left: 1px solid var(--borde-suave);
+    border-right: 1px solid var(--borde-suave);
+}
+
+
+.encabezado {
+    padding: 2.25rem 2.25rem 1.75rem;
+    border-top: 4px solid var(--rosa-principal);
+    border-bottom: 1px solid var(--borde-suave);
+    border-radius: 12px 12px 0 0;
+}
+
+h1 {
+    font-size: 2.1rem;
+    color: var(--rosa-principal);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+}
+
+.puesto {
+    font-size: 1rem;
+    color: var(--texto-principal);
+    margin-top: 0.35rem;
+}
+
+.contacto {
+    font-size: 0.92rem;
+    color: var(--texto-secundario);
+    margin-top: 0.75rem;
+}
+
+.contacto a {
+    color: var(--rosa-oscuro);
+    text-decoration: none;
+    border-bottom: 1px solid var(--borde-suave);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.contacto a:hover {
+    color: var(--rosa-principal);
+    border-bottom-color: var(--rosa-principal);
+}
+
+.enlaces-sociales {
+    display: inline-block;
+    margin-top: 0.35rem;
+    font-weight: 500;
+}
+
+.contenido {
+    padding: 0.5rem 2.25rem 1.5rem;
+}
+
+.bloque {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--borde-suave);
+}
+
+.bloque:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--rosa-principal);
+    margin-bottom: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+h2::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--rosa-principal);
+    display: inline-block;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--texto-principal);
+    margin-top: 0.85rem;
+    margin-bottom: 0.25rem;
+}
+
+.bloque > h3:first-of-type {
+    margin-top: 0.25rem;
+}
+
+p {
+    font-size: 0.96rem;
+    color: var(--texto-principal);
+}
+
+.institucion {
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+    margin-bottom: 0.35rem;
+}
+
+.entrada {
+    padding-left: 0.9rem;
+    border-left: 2px solid var(--rosa-suave);
+    margin-bottom: 1.1rem;
+    transition: border-color 0.2s ease;
+}
+
+.entrada:hover {
+    border-left-color: var(--rosa-principal);
+}
+
+.entrada:last-child {
+    margin-bottom: 0;
+}
+
+.lista-habilidades,
+.lista-idiomas,
+.lista-proyectos {
+    padding-left: 1.25rem;
+    margin-top: 0.4rem;
+}
+
+.lista-habilidades li,
+.lista-idiomas li {
+    font-size: 0.94rem;
+    color: var(--texto-principal);
+    margin-bottom: 0.4rem;
+}
+
+.lista-habilidades li::marker,
+.lista-idiomas li::marker {
+    color: var(--rosa-principal);
+}
+
+.lista-proyectos li {
+    font-size: 0.95rem;
+    color: var(--texto-principal);
+    margin-bottom: 0.75rem;
+    padding: 0.65rem 0.85rem;
+    background-color: var(--rosa-suave);
+    border-radius: 8px;
+}
+
+.lista-proyectos li:last-child {
+    margin-bottom: 0;
+}
+
+.lista-proyectos a {
+    color: var(--rosa-oscuro);
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 0.25rem;
+}
+
+.lista-proyectos a:hover {
+    text-decoration: underline;
+}
+
+
+.pie {
+    padding: 1.1rem 2.25rem;
+    border-top: 1px solid var(--borde-suave);
+    border-bottom: 1px solid var(--borde-suave);
+    border-radius: 0 0 12px 12px;
+    text-align: center;
+    font-size: 0.84rem;
+    color: var(--texto-secundario);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 1rem 0.6rem;
+    }
+
+    .encabezado,
+    .contenido,
+    .pie {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+}
